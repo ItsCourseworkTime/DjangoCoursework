@@ -1,7 +1,55 @@
+#navbar {
+  overflow: hidden;
+  background-color: #3A00FFAF;
+  
+  margin-bottom: 20px;
+}
+
+#navbar a {
+  float: left;
+  color: #FF8000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #d0d0d0;
+  color: #000000;
+}
+
 body {
     background-color: #C4E7FF;
 }
 
-p {
-    color: green;
+.postdiv {
+    margin: auto;
+    width: 90%;
+    border-radius: 20px;
+    background: #3A00FFAF;
+    border: 5px solid #3A00FF;
+    
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+
+    margin-bottom: 10px;
+}
+
+div.postdiv h1 {
+    color: #FF8000;
+    
+    margin-left: 10px;
+}
+
+div.postdiv .posttext {
+    color: white;
+    text-align: center;
+}
+
+div.postdiv .postdate {
+    color: #FF8000;
+    text-align: right;
 }
