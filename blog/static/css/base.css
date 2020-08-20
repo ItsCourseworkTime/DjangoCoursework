@@ -51,5 +51,7 @@ div.postdiv .posttext {
 
 div.postdiv .postdate {
     color: #FF8000;
-    text-align: right;
+    text-align: left;
+
+    margin-left: 10px;
 }
