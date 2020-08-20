@@ -9,7 +9,7 @@
         {% for post in posts %}
             <div class="postdiv">
                 <h1>{{ post.title }}</h1>
-                <p class="posttext">{{ post.text }}</p>
+                <p class="posttext">{{ post.text|linebreaksbr }}</p>
                 <p class="postdate">{{ post.published_date }}</p>
             </div>
         {% endfor %}
