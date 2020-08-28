@@ -13,7 +13,12 @@ class HomePageTest(TestCase):
         found = resolve('/CV/')  
         self.assertEqual(found.func, CV.views.cvhome)  
         
-    def test_cv_templates(self):
+    def test_cv_home_templates(self):
         response = self.client.get('/CV/')
         self.assertTemplateUsed(response, 'blog/base.html')
         self.assertTemplateUsed(response, 'CV/cvhome.html')
+
+    def test_cv_edit_templates(self):
+        response = self.client.get('/CV/edit/')
+        self.assertTemplateUsed(response, 'blog/base.html')
+        self.assertTemplateUsed(response, 'CV/cvedit.html')
