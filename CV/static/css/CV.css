@@ -10,6 +10,8 @@
     padding-left: 5px;
 
     margin-bottom: 10px;
+    
+    text-align:center
 }
 
 div.cv h2 {
@@ -23,4 +25,12 @@ div.cv p {
     color: white;
     text-align: center;
 }
+
+div.cv textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 

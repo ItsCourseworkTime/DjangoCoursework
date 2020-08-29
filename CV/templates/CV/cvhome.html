@@ -20,24 +20,25 @@
         
         <div id="pstatement">
             <h2>Personal Statement</h2>
-            <p>...</p>
+            <p>{{ pstatement.text|linebreaksbr }}</p>
         </div>
 
         
         <div id="education">
             <h2>Education</h2>
-            <p>Attended St Ivo School<br>
-            Goes to University of Birmingham, studying Computer Science Msci</p>
+            <p>{{ education.text|linebreaksbr }}</p>
         </div>
         
         
         <div id="achievments">
             <h2>Achievments</h2>
+            <p>{{ achievments.text|linebreaksbr }}</p>
         </div>
         
         
         <div id="wexperience">
             <h2>Work Experience</h2>
+            <p>{{ wexperience.text|linebreaksbr }}</p>
         </div>
 
     </div>

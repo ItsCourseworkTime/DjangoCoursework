@@ -10,9 +10,38 @@
 {% block body %}
         
     <div class="cv">
-    
+        <form method="POST" id="cvform">        
         
-
+            <div id="pstatement">
+                <h2>Personal Statement</h2>
+                <textarea form="cvform" name="pstatement" id="psinput" rows="20" cols="100">{{ pstatement.text|linebreaksbr }}</textarea>
+            </div><br>
+            
+            
+            <div id="education">
+                <h2>Education</h2>
+                <textarea form="cvform" name="education" id="eduinput" rows="20" cols="100">{{ education.text|linebreaksbr }}</textarea>
+            </div><br>
+            
+            
+            <div id="achievments">
+                <h2>Achievments</h2>
+                <textarea form="cvform" name="achievments" id="achievinput" rows="20" cols="100">{{ achievments.text|linebreaksbr }}</textarea>
+            </div><br>
+            
+            
+            <div id="wexperience">
+                <h2>Work Experience</h2>
+                <textarea form="cvform" name="wexperience" id="workinput" rows="20" cols="100">{{ wexperience.text|linebreaksbr }}</textarea>
+            </div><br>
+            
+            
+            {% csrf_token %}
+            
+            
+            <input type="submit" value="Save CV" id="save">
+            
+        </form>
     </div>
 
 {% endblock body %}

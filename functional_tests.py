@@ -49,21 +49,23 @@ class CVTest(unittest.TestCase):
         time.sleep(1)
         self.assertEqual('CV Edit', self.browser.title)
         
-        #From here you can edit education such that uni has been finished
-        self.browser.find_element_by_id('unicomplete').click()
-        
         #The personal statement is changed
-        psinput = self.browser.find_element_by_id('psinput')
+        psinput = self.browser.find_element_by_name('psinput')
         psstr = 'This is the new personal statement that is very cool'
         psinput.send_keys(psstr)
         
-        #An achievment is also added
-        achievinput = self.browser.find_element_by_id('achievinput')
+        #Education can be edited
+        eduinput = self.browser.find_element_by_id('education')
+        edustr = 'This is education details that are very cool'
+        eduinput.send_keys(edustr);
+        
+        #The listed achievments can be changed
+        achievinput = self.browser.find_element_by_name('achievinput')
         achievstr = 'I achieved this thing that is very cool'
         achievinput.send_keys(achievstr)
         
-        #A work experience can also be added
-        workinput = self.browser.find_element_by_id('workinput')
+        #Work experiences can be changed
+        workinput = self.browser.find_element_by_name('workinput')
         workstr = 'This is some work experience I did that is very cool'
         workinput.send_keys(workstr)
         
@@ -73,10 +75,10 @@ class CVTest(unittest.TestCase):
         self.assertEqual('CV Home', self.browser.title)
         
         #The CV should now include the items added above with university completed
-        self.assertNotIn('studying', self.browser.find_element_by_id('education').text.lower())
-        self.assertIn(psstr, self.browser.find_element_by_id('pstatement'))
-        self.assertIn(achievstr, self.browser.find_element_by_id('achievments'))
-        self.assertIn(workstr, self.browser.find_element_by_id('wexperience'))
+        self.assertIn(psstr, self.browser.find_element_by_id('pstatement').text)
+        self.assertIn(edustr, self.browser.find_element_by_id('education').text)
+        self.assertIn(achievstr, self.browser.find_element_by_id('achievments').text)
+        self.assertIn(workstr, self.browser.find_element_by_id('wexperience').text)
         
     
 
